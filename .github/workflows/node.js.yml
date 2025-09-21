@@ -36,6 +36,6 @@ jobs:
         echo "MONGO_DB_URL=${{ secrets.MONGO_DB_URL }}" >> .env
       working-directory: nodejs-rest-api-EC2-main
 
-    - name: Restart PM2
-      run: pm2 restart BackendAPI
+   - name: Restart PM2
+      run: pm2 restart ecosystem.config.js --update-env
       working-directory: nodejs-rest-api-EC2-main

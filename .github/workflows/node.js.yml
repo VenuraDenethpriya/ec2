@@ -21,9 +21,9 @@ jobs:
       uses: actions/setup-node@v4
       with:
         node-version: ${{ matrix.node-version }}
-        # cache: 'npm'   # enable later when you add package-lock.json
+        # cache: 'npm'   # enable later after adding package-lock.json
 
-    - run: npm ci
+    - run: npm install
     - run: npm run build --if-present
 
     - name: Create .env file
